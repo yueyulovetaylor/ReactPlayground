@@ -39,6 +39,26 @@ class App extends Component {
     );
   }
 
+/* For a single DOM Element instead of transition group, please refer to 
+  render() {
+    return (
+      <Fragment>
+        <CSSTransition
+          in={this.state.show}
+          timeout={1000}
+          classNames='fade'
+          unmountOnExit
+          onEntered={(el)=>{el.style.color = 'blue'}}
+          appear={true}
+        >
+          <div>hello</div>
+        </CSSTransition>
+        <button onClick={this.handleToggle}>toggle</button>
+      </Fragment>
+    );
+  }
+*/
+
   handleAddItem() {
     this.setState((prevState) => {
       return {
