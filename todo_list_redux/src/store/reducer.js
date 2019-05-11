@@ -23,8 +23,9 @@ export default (state = defaultState, action) => {
     newState.list.push(newState.inputValue);
     newState.inputValue = '';
   } else if (action.type === DELETE_TODO_ITEM) {
-    console.log(action.index);
-    newState.list.splice(action.index, 1);
+    console.log("action = " + JSON.stringify(action))
+    console.log("reducer get delete index " + action.item);
+    newState.list.splice(action.item, 1);
   } else if (action.type === INIT_LIST_ACTION) {
     newState.list = [...newState.list, ...action.data]
   }
