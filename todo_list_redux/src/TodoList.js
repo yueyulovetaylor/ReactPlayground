@@ -5,9 +5,12 @@ import {
   getInputChangeAction, 
   getAddItemAction, 
   getDeleteItemAction,
-  getTodoList 
+  // initListAction, When not using any midware
+  getInitList
+  // getTodoList When using redux-sunk
 } from './store/actionCreators'
 import TodoListUI from './TodoListUI'
+// import axios from 'axios'; Uncomment when used
 
 class TodoList extends Component {
   constructor(props) {
@@ -33,8 +36,21 @@ class TodoList extends Component {
   }
 
   componentDidMount() {
-    const action = getTodoList();
+    const action = getInitList();
     store.dispatch(action);
+
+    // When direct do in life cycle function
+    // axios.get('http://localhost:5000/list.json').then((res) => {
+    //   const data = res.data;
+    //   const action = initListAction(data);
+    //   store.dispatch(action);
+    // }).catch((e) => {
+    //   console.log(e);
+    // })
+
+    // When using redux sunk
+    // const action = getTodoList();
+    // store.dispatch(action);
   }
 
   handleInputChange(e) {
@@ -52,7 +68,6 @@ class TodoList extends Component {
   }
 
   handleItemDelete(index) {
-    console.log(`handleItemDelete ${index}`)
     const action = getDeleteItemAction(index);
     store.dispatch(action);
   }
