@@ -9,9 +9,38 @@ import {
   NavItem,
   SearchWrapper,
   NavSearch,
+  SearchInfo,
+  SearchInfoTitle,
+  SearchInfoList,
+  SearchInfoSwitch,
+  SearchInfoItem,  
   Addition,
   Button
 } from './style'
+
+const getListArea = (show) => {
+  if (show) {
+    return (
+      <SearchInfo>
+        <SearchInfoTitle>
+          Top Results
+          <SearchInfoSwitch>
+            Switch
+          </SearchInfoSwitch>
+          <SearchInfoList>
+            <SearchInfoItem>Education</SearchInfoItem>
+            <SearchInfoItem>Education</SearchInfoItem>
+            <SearchInfoItem>Education</SearchInfoItem>
+            <SearchInfoItem>Education</SearchInfoItem>
+            <SearchInfoItem>Education</SearchInfoItem>
+          </SearchInfoList>
+        </SearchInfoTitle>
+      </SearchInfo>
+    );
+  } else {
+    return null;
+  }
+}
 
 const Header = (props) => (
   <HeaderWrapper>
@@ -38,6 +67,7 @@ const Header = (props) => (
         <i className={`${props.focused ? 'focused' : ''} iconfont`}>
           &#xe637;
         </i>
+        {getListArea(props.focused)}
       </SearchWrapper>
     </Nav>
     <Addition>
