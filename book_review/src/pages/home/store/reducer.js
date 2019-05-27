@@ -32,6 +32,13 @@ const defaultState = fromJS({
     title: 'Nancy Pelosi and Fakebook’s Dirty Tricks',
     desc: "This latest doctored video proves that Facebook as we knew it is over.",
     imgUrl: 'https://static01.nyt.com/images/2019/05/26/opinion/26swisher/26swisher-square640.jpg'
+  }],
+  recommendList: [{
+    id: 1,
+    imgUrl: "http://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+  }, {
+    id: 2,
+    imgUrl: "http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
   }]
 });
 
