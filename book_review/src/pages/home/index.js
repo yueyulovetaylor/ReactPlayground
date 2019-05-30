@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
@@ -10,10 +10,11 @@ import {
 } from './style';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import { BackToTop } from './style';
 
-class Home extends Component {
-  componentDidMount() {
-    this.props.changeHomeData();
+class Home extends PureComponent {
+  handleScrollTop() {
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -32,17 +33,42 @@ class Home extends Component {
           <Recommend />
           <Writer />
         </HomeRight>
+        {
+          this.props.showScroll 
+            ? <BackToTop onClick={this.handleScrollTop}>Top</BackToTop>
+            : null
+        }
       </HomeWrapper>
     );
   }
+
+  componentDidMount() {
+    this.props.changeHomeData();
+    this.bindEvents();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.props.changeScrollTopShow);
+  }
+
+  bindEvents() {
+    window.addEventListener('scroll', this.props.changeScrollTopShow);
+  }
 }
+
+const mapState = (state) => ({
+  showScroll: state.getIn(['home', 'showScroll'])
+});
 
 const connectDispatch = (dispatch) => ({
   changeHomeData() {
-    const action = actionCreators.getHomeInfo();
-    dispatch(action);
+    dispatch(actionCreators.getHomeInfo());
+  },
+  changeScrollTopShow() {
+    dispatch(actionCreators.toggleTopShow(
+      document.documentElement.scrollTop > 200));
   }
 })
 
-export default connect(null, connectDispatch)(Home);
+export default connect(mapState, connectDispatch)(Home);
 

@@ -16,7 +16,8 @@ import {
   SearchInfoItem,  
   Addition,
   Button
-} from './style'
+} from './style';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -65,7 +66,9 @@ class Header extends Component {
     const { focused, handleInputFocus, handleInputBlur, list } = this.props;
     return (
       <HeaderWrapper>
-        <Logo/>
+        <Link to='/'>
+          <Logo/>
+        </Link>
         <Nav>
           <NavItem className='left active'>Home</NavItem>
           <NavItem className='left'>Download App</NavItem>
