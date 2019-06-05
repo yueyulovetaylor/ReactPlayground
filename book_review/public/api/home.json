@@ -23,12 +23,12 @@
       "id": 2,
       "title": "A Migrant Family Takes a Greyhound Across America",
       "desc": "Greyhound buses have become an essential part of the journey for many Central American migrants, who provide revenue for the struggling company.",
-      "imgUrl": "https://static01.nyt.com/images/2019/05/24/us/greyhound-fader01/greyhound-fader01-threeByTwoMediumAt2X.jpg"
+      "imgUrl": "/img/newsHeaderImg2.jpg"
     }, {
       "id": 3,
       "title": "Nancy Pelosi and Fakebook’s Dirty Tricks",
       "desc": "This latest doctored video proves that Facebook as we knew it is over.",
-      "imgUrl": "https://static01.nyt.com/images/2019/05/26/opinion/26swisher/26swisher-square640.jpg"
+      "imgUrl": "/img/newsHeaderImg3.jpg"
     }],
     "recommendList": [{
       "id": 1,
