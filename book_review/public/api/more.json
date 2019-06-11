@@ -3,19 +3,14 @@
   "data": [
     {
       "id": 4,
-      "title": "‘It Was Like a Zoo’: Death on an Unruly, Overcrowded Everest",
-      "desc": "This has been one of the deadliest seasons on the world’s highest peak, with at least 10 deaths. Veteran mountaineers blame an increase in permits and too many inexperienced climbers.",
-      "imgUrl": "https://static01.nyt.com/images/2019/05/26/world/26everest/merlin_138579441_fd4730ed-a8b8-4eb7-802c-800c436cd82a-threeByTwoLargeAt2X.jpg"
+      "title": "Alabama governor signs chemical castration bill into law",
+      "desc": "Republican Alabama Gov. Kay Ivey on Monday signed a bill into law that requires someone convicted of a sex offense against a child under the age of 13 to begin chemical castration a month before being released from custody.",
+      "imgUrl": "/img/newsHeaderImg4.jpg"
     }, {
       "id": 5,
-      "title": "A Migrant Family Takes a Greyhound Across America",
-      "desc": "Greyhound buses have become an essential part of the journey for many Central American migrants, who provide revenue for the struggling company.",
-      "imgUrl": "https://static01.nyt.com/images/2019/05/24/us/greyhound-fader01/greyhound-fader01-threeByTwoMediumAt2X.jpg"
-    }, {
-      "id": 6,
-      "title": "Nancy Pelosi and Fakebook’s Dirty Tricks",
-      "desc": "This latest doctored video proves that Facebook as we knew it is over.",
-      "imgUrl": "https://static01.nyt.com/images/2019/05/26/opinion/26swisher/26swisher-square640.jpg"
+      "title": "Passenger opens plane emergency exit, mistaking it for the toilet",
+      "desc": "A passenger on a UK-Pakistan flight at Manchester Airport caused severe delays after opening the emergency exit door in an attempt to reach the bathroom while the plane was still on the ground.",
+      "imgUrl": "/img/newsHeaderImg5.jpg"
     }
   ]
 }
